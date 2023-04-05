@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/a")
 public class MovieListController {
 	
-	@Autowired
+	//@Autowired
 	private MovieListInterface mlI ;
 
 	
@@ -37,6 +37,7 @@ public class MovieListController {
 	{
 		mlI.saveAndFlush(movie);
 	return	ResponseEntity.ok().build();
+	
 		
 	}
 }
