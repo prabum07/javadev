@@ -2,13 +2,13 @@ package com.prabu.loosecouple;
 
 import org.springframework.stereotype.Component;
 
-@Component("oldPrinter")
-public class HPPrinter implements Repo {
+@Component("newPrinter")
+public class EpsonPrinter implements Repo {
 
 	@Override
 	public String print() {
 		// TODO Auto-generated method stub
-		return "HPPrinter";
+		return "EpsonPrinter";
 	}
 
 }
