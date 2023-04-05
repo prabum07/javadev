@@ -21,9 +21,10 @@ public class FirstController {
 	
 	@RequestMapping("singleton")
 	@ResponseBody
-	public String singleton() throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, CloneNotSupportedException
+	public String singleton() throws Exception
 	{
 		Singleton s= Singleton.getInstance();
+		s.print();
 		System.out.println(s.hashCode());
 		
 		//still we can create two object of singleton class by below method.
