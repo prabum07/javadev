@@ -1,6 +1,6 @@
 package com.prabu.breakSingleton;
 
-public class Singleton {
+public class Singleton implements Cloneable {
 
 	public static Singleton st =new Singleton(); //creating the object while initializing itself
 	public int num=0;
@@ -20,4 +20,7 @@ public class Singleton {
 		num++;
 		System.out.print(num+"ggf");
 	}
+	public Object clone()throws CloneNotSupportedException{  
+		return super.clone();  
+		}  
 }

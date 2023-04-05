@@ -21,7 +21,7 @@ public class FirstController {
 	
 	@RequestMapping("singleton")
 	@ResponseBody
-	public String singleton() throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException
+	public String singleton() throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, CloneNotSupportedException
 	{
 		Singleton s= Singleton.getInstance();
 		System.out.println(s.hashCode());
@@ -31,6 +31,10 @@ public class FirstController {
 		const1.setAccessible(true);
 		Singleton s1=( Singleton)const1.newInstance();
 		System.out.print(s1.hashCode());
+		//we can also clone the object by implement the cloneable interface and clone the object to break singleton pattern
+		Singleton s2=(Singleton) s.clone();
+		System.out.print(s2.hashCode());
+
 
 
 		return "prabu";
