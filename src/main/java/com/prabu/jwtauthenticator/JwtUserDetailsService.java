@@ -9,20 +9,21 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class JwtUserDetailsService implements UserDetailsService{
+public class JwtUserDetailsService //implements UserDetailsService
+{
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
-		if(username.equals("abcd"))
-		{
-			return new User("abcd","1234",new ArrayList<>());
-			
-			}else
-			{
-				throw new UsernameNotFoundException("user not found with username"+username);
-		}
-	}
+//	@Override
+//	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//		// TODO Auto-generated method stub
+//		if(username.equals("abcd"))
+//		{
+//			return new User("abcd","1234",new ArrayList<>());
+//			
+//			}else
+//			{
+//				throw new UsernameNotFoundException("user not found with username"+username);
+//		}
+//	}
 
 	
 }

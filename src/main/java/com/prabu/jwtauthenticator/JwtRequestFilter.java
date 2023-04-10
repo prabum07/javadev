@@ -15,11 +15,11 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 public class JwtRequestFilter  {
 
-	@Autowired
-	private JwtUserDetailsService userDetailsService;
+	//@Autowired
+//	private JwtUserDetailsService userDetailsService;
 	
-	@Autowired
-	private JwtTokenUtil jwtTokenUtil;
+//	@Autowired
+//	private JwtTokenUtil jwtTokenUtil;
 /*
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)

@@ -15,29 +15,29 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @RestController
 public class jwtauthenticatorController {
 
-	@Autowired
-	private JwtTokenUtil jwtTokenUtil;
-	@Autowired
-	private UserDetailsService userDetailsService;
-	
-	@RequestMapping(value="/authenticate",method=RequestMethod.POST)
-	public ResponseEntity<?> createAuthenticate(@RequestParam(value="username") String username,
-			@RequestParam(value="password") String password)
-	{
-		if(!username.equals("abcd") || !password.equals("1234"))
-		{
-			return ResponseEntity.ok("Invalid");
-
-		}
-		final UserDetails userDetails=userDetailsService.loadUserByUsername(username);
-		final String token = jwtTokenUtil.generateToken(userDetails);
-		return ResponseEntity.ok(token);
-	}
-	
-	@RequestMapping({"/hello"})
-	public String hello()
-	{
-		return "hello jwt";
-	}
+//	@Autowired
+//	private JwtTokenUtil jwtTokenUtil;
+//	@Autowired
+//	private UserDetailsService userDetailsService;
+//	
+//	@RequestMapping(value="/authenticate",method=RequestMethod.POST)
+//	public ResponseEntity<?> createAuthenticate(@RequestParam(value="username") String username,
+//			@RequestParam(value="password") String password)
+//	{
+//		if(!username.equals("abcd") || !password.equals("1234"))
+//		{
+//			return ResponseEntity.ok("Invalid");
+//
+//		}
+//		final UserDetails userDetails=userDetailsService.loadUserByUsername(username);
+//		final String token = jwtTokenUtil.generateToken(userDetails);
+//		return ResponseEntity.ok(token);
+//	}
+//	
+//	@RequestMapping({"/hello"})
+//	public String hello()
+//	{
+//		return "hello jwt";
+//	}
 	
 }
