@@ -9,6 +9,8 @@ import io.micrometer.core.ipc.http.HttpSender.Method;
 @interface vaccinated{}
 public class USEmbassy {
 
+	//this is marker annotation since we marked with some annotation like "vaccinated" similar 
+	//marker annotations are @controller @entity @component
 	@vaccinated
 	public void visaApplication()
 	{
