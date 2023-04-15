@@ -14,6 +14,8 @@ public class MethodReferenceStaticMethod {
     StringLengthFunction stringLengthFunction = String::length;
 
     // Using the reference to call the method on a string
+    //calling method will be functional interface reference will be implemented function here string.length is implemented
+    //and we take reference with interface name 
     int length = stringLengthFunction.getLength("hello");
     System.out.println(length); // Output: 5
 	;
