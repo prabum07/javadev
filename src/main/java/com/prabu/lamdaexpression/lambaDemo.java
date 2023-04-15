@@ -51,7 +51,7 @@ public class lambaDemo {
 	for(int i=0;i<allStudents.size();i++)
 	{
 		
-		System.out.print(	pred.test(allStudents.get(i).getStd()));
+		System.out.print(	pred1.test(allStudents.get(i).getStd()));
 
 	}
 
