@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+
+<bean id="triangle" class="springnotboot.Triangle">
+
+<property name="p" ref="zeropoint"/>
+
+<constructor-arg value="ff"></constructor-arg>
+</bean>
+
+<bean id="zeropoint" class="springnotboot.Point">
+<property name="x" value="10"/>
+<property name="y" value="20"/>
+
+</bean>
+</beans>
