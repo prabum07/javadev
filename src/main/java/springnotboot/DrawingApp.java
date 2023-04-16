@@ -16,7 +16,7 @@ public static void main(String[] args) {
 
  System.out.println( tri.getP());
   tri.print();
-  Triangle tri2=  (Triangle)context.getBean("triangle");
+  Triangle tri2=  (Triangle)context.getBean("triangle1");
   System.out.println(tri2.getFac());
 
 }
