@@ -4,18 +4,28 @@
 
 <beans>
 
-<bean id="triangle" class="springnotboot.Triangle">
 
-<property name="p" ref="zeropoint"/>
 
+<bean id="triangle" class="springnotboot.Triangle" init-method="initCustomMethod" destroy-method="destroyCustomMethod">
+<property name="p" ref="p"/>
 <constructor-arg value="ff"></constructor-arg>
 </bean>
 
+
 <alias name="triangle" alias="triangle-alias"></alias>
 
-<bean id="zeropoint" class="springnotboot.Point">
+
+
+
+<bean id="p1" class="springnotboot.Point">
 <property name="x" value="10"/>
 <property name="y" value="20"/>
 
+</bean>
+
+
+<bean id="p" class="springnotboot.Point">
+<property name="x" value="20"/>
+<property name="y" value="30"/>
 </bean>
 </beans>
