@@ -2,9 +2,16 @@ package springnotboot;
 
 import org.apache.catalina.core.ApplicationContext;
 import org.apache.naming.factory.BeanFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DrawingApp {
+	@Autowired
+	dummyBean dummay;
+	
+	@Autowired
+	ConfigurationBeanTest dummay1 =new ConfigurationBeanTest();
 public static void main(String[] args) {
 	
 	//BeanFactory b=new 	XmlBeanFactory(new FileSystemResource("spring.xml"));
@@ -14,9 +21,12 @@ public static void main(String[] args) {
     System.out.println("check whether bean life cycle call on app intialization or during get reference from getbean function");
   Triangle tri=  (Triangle)context.getBean("triangle");
   //tri.setName("prabu");
-  set(tri);
+ // set(tri);
+  DrawingApp app=new DrawingApp();
+  System.out.println(app.dummay.a);
 
- System.out.println( tri.getP());
+  System.out.println(app.dummay1);
+ System.out.println( tri.getName());
   tri.print();
 
 

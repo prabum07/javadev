@@ -12,6 +12,16 @@ import org.springframework.context.ApplicationContextAware;
 
 public class Triangle implements InitializingBean,ApplicationContextAware,BeanNameAware,DisposableBean,BeanPostProcessor,BeanFactoryPostProcessor {
 
+	public Triangle(String ss, String name) {
+		super();
+		this.ss = ss;
+		this.name = name;
+	}
+	public Triangle(Point p, String name) {
+		super();
+		this.p = p;
+		this.name = name;
+	}
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		// TODO Auto-generated method stub
@@ -27,6 +37,13 @@ public class Triangle implements InitializingBean,ApplicationContextAware,BeanNa
 	}
 	NotInBeanFactory fac;
 	Point p;
+	String ss;
+	public String getSs() {
+		return ss;
+	}
+	public void setSs(String ss) {
+		this.ss = ss;
+	}
 	public Triangle(Point p, Point p1) {
 		super();
 		this.p = p;
